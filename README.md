@@ -28,6 +28,14 @@ Scaffold(
 );
 ```
 
+It provides a couple of UI elements to request the forecost. By default, it shows the forecast for tomorrow.
+To request a forecast for a different day, use the `WeatherForecastController.requestForecast()` method directly:
+
+```dart
+final _controller = WeatherForecastController(apiKey: '75ab5e7e2f15d1599da672c4a6bc4a87');
+_controller.requestForecast({latitude: 52.3676, longitude: 4.9041, day: DateTime.now().add(Duration(days: 2)));
+```
+
 ## Usage without UI
 
 First, instantiate the `WeatherApi` class with your API key.
