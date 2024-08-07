@@ -1,0 +1,31 @@
+name: weather_sdk
+description: "An SDK to retrieve weather data"
+version: 0.0.1
+issue_tracker: https://github.com/ueman/weather_sdk/issues
+repository: https://github.com/ueman/weather_sdk
+
+# Usually, the lower version constraints should be far lower to ensure customers
+# can use it while being a couple of Dart & Flutter version behind.
+environment:
+  sdk: '>=3.4.4 <4.0.0'
+  flutter: ">=3.22.0"
+
+# Dependency versions should be choosen with care. A wide as possible range makes
+# the life of our consumers easier, since they're hopefully not forced to update
+# their dependencies due to our constraints.
+dependencies:
+  flutter:
+    sdk: flutter
+  # Without http, we would write something like http ourselves to enable
+  # us making requests on io and web platforms with a unified interface.
+  # Additionally, this allows the customer to use cupertino_http/cronet_http.
+  # So in this case, the dependency actually provides a benefit to the customer.
+  http: ^1.0.0 
+
+dev_dependencies:
+  flutter_lints: ^3.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
